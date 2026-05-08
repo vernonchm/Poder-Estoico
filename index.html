@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>El Arte de Estar Solo — Manual de Ingeniería Mental</title>
+<meta name="description" content="Manual de Ingeniería Mental para reconstruir tu vida cuando el mundo duerme. 18 herramientas. 4 sistemas. Un contrato contigo mismo. $29.99 USD.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- META PIXEL - Hollyfield Inversiones -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1295795242741019');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1295795242741019&ev=PageView&noscript=1"/></noscript>
+<!-- END META PIXEL -->
+
+<!-- TIKTOK SDK PLACEHOLDER -->
+<script>
+/* !function (w, d, t) {...}(window, document, 'ttq');
+ttq.load('YOUR_TIKTOK_PIXEL_ID');
+ttq.page(); */
+</script>
+<!-- END TIKTOK SDK -->
+
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --black:#000;--deep:#050505;--card:#0a0a0a;--border:#1a1a1a;
+  --gold:#c9a84c;--gold-light:#e2c97e;--gold-dim:rgba(201,168,76,.15);
+  --white:#f5f5f0;--grey:#888;--text:#ccc;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --safe-top:env(safe-area-inset-top,0px);
+  --safe-bottom:env(safe-area-inset-bottom,0px);
+  --safe-left:env(safe-area-inset-left,0px);
+  --safe-right:env(safe-area-inset-right,0px);
+}
+html{scroll-behavior:smooth;font-size:16px;-webkit-text-size-adjust:100%}
+body{
+  background:var(--black);color:var(--white);font-family:var(--sans);
+  line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;-webkit-tap-highlight-color:transparent;
+  padding:var(--safe-top) var(--safe-right) var(--safe-bottom) var(--safe-left);
+}
+
+/* UTILITY */
+.container{max-width:900px;margin:0 auto;padding:0 clamp(16px,5vw,24px)}
+.gold{color:var(--gold)}
+.fade-in{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+/* CTA BUTTON — 54px min touch target */
+.cta-btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:54px;padding:16px 48px;
+  background:linear-gradient(135deg,var(--gold),#a8893a);
+  color:var(--black);font-family:var(--sans);font-weight:700;
+  font-size:clamp(.85rem,2.2vw,1rem);
+  text-decoration:none;text-transform:uppercase;
+  letter-spacing:clamp(1.5px,0.4vw,3px);
+  border:none;cursor:pointer;position:relative;overflow:hidden;
+  transition:transform .3s,box-shadow .3s;
+  touch-action:manipulation;
+}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 40px rgba(201,168,76,.35)}
+.cta-btn:active{transform:scale(.97);box-shadow:0 2px 16px rgba(201,168,76,.25)}
+.cta-btn::after{
+  content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);
+  transition:left .5s;
+}
+.cta-btn:hover::after{left:100%}
+.cta-sm{min-height:48px;padding:14px 36px;font-size:clamp(.8rem,2vw,.85rem);letter-spacing:2px}
+
+/* DIVIDER */
+.divider{width:60px;height:1px;background:var(--gold);margin:40px auto;opacity:.5}
+.divider-wide{width:100%;max-width:200px}
+
+/* ====== HERO ====== */
+.hero{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:80px 24px;position:relative;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 30%,rgba(201,168,76,.06) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-time{
+  font-family:var(--serif);font-size:clamp(1rem,2vw,1.2rem);
+  color:var(--gold);letter-spacing:4px;text-transform:uppercase;
+  margin-bottom:32px;opacity:0;animation:fadeUp 1s .3s forwards;
+}
+.hero h1{
+  font-family:var(--serif);font-weight:700;
+  font-size:clamp(2rem,5.5vw,3.8rem);line-height:1.15;
+  color:var(--white);max-width:800px;margin:0 auto 28px;
+  opacity:0;animation:fadeUp 1s .6s forwards;
+}
+.hero-sub{
+  font-size:clamp(.95rem,1.8vw,1.15rem);color:var(--text);
+  max-width:600px;margin:0 auto 48px;font-weight:300;
+  opacity:0;animation:fadeUp 1s .9s forwards;
+}
+.hero-price{
+  font-family:var(--serif);font-size:clamp(1.1rem,3vw,1.4rem);color:var(--gold-light);
+  margin-bottom:32px;opacity:0;animation:fadeUp 1s 1.1s forwards;
+}
+.hero-price span{font-size:clamp(1.6rem,5vw,2.2rem);font-weight:700}
+.hero .cta-btn{opacity:0;animation:fadeUp 1s 1.3s forwards}
+.hero-scroll{
+  position:absolute;bottom:40px;left:50%;transform:translateX(-50%);
+  color:var(--grey);font-size:.75rem;letter-spacing:3px;text-transform:uppercase;
+  opacity:0;animation:fadeUp 1s 1.6s forwards;
+}
+.hero-scroll::after{
+  content:'';display:block;width:1px;height:40px;
+  background:var(--gold);margin:12px auto 0;opacity:.4;
+  animation:pulse 2s infinite;
+}
+
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}from{opacity:0;transform:translateY(20px)}}
+@keyframes pulse{0%,100%{opacity:.2}50%{opacity:.6}}
+
+/* ====== SECTIONS ====== */
+section{padding:100px 0}
+.section-label{
+  font-size:.7rem;letter-spacing:5px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:16px;font-weight:600;
+}
+.section-title{
+  font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);
+  font-weight:700;line-height:1.2;margin-bottom:24px;
+}
+.section-text{color:var(--text);font-size:1rem;line-height:1.85;margin-bottom:24px;max-width:720px}
+
+/* PROBLEM */
+.problem{background:var(--deep);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.problem-quote{
+  font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,2.5vw,1.6rem);
+  color:var(--gold-light);border-left:2px solid var(--gold);
+  padding-left:24px;margin:40px 0;line-height:1.6;
+}
+.problem-list{list-style:none;margin:32px 0}
+.problem-list li{
+  padding:16px 0;border-bottom:1px solid var(--border);
+  color:var(--text);font-size:.95rem;display:flex;align-items:baseline;gap:12px;
+}
+.problem-list li::before{content:'×';color:var(--gold);font-size:1.2rem;font-weight:700;flex-shrink:0}
+
+/* SYSTEM */
+.system-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin:48px 0}
+.system-card{
+  background:var(--card);border:1px solid var(--border);padding:36px 28px;
+  position:relative;overflow:hidden;transition:border-color .4s,transform .4s;
+}
+.system-card:hover{border-color:var(--gold);transform:translateY(-4px)}
+.system-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  opacity:0;transition:opacity .4s;
+}
+.system-card:hover::before{opacity:1}
+.system-num{
+  font-family:var(--serif);font-size:3rem;font-weight:700;
+  color:var(--gold-dim);position:absolute;top:12px;right:20px;
+  line-height:1;
+}
+.system-card h3{
+  font-family:var(--serif);font-size:1.4rem;font-weight:700;
+  color:var(--gold);margin-bottom:8px;
+}
+.system-card p{color:var(--text);font-size:.9rem;line-height:1.7}
+
+/* TOOLS */
+.tools{background:var(--deep);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin:48px 0}
+.tool-item{
+  padding:20px;border:1px solid var(--border);background:var(--black);
+  transition:border-color .3s,background .3s;
+}
+.tool-item:hover{border-color:var(--gold);background:var(--card)}
+.tool-num{font-size:.65rem;color:var(--gold);letter-spacing:3px;margin-bottom:6px;font-weight:600}
+.tool-item h4{font-family:var(--serif);font-size:1.05rem;color:var(--white);font-weight:600}
+
+/* FIREWALL */
+.firewall{text-align:center;padding:120px 0}
+.firewall-box{
+  border:2px solid var(--gold);padding:60px 40px;max-width:720px;margin:0 auto;
+  position:relative;background:linear-gradient(180deg,rgba(201,168,76,.05) 0%,rgba(0,0,0,.9) 100%);
+}
+.firewall-box::before,.firewall-box::after{
+  content:'';position:absolute;width:24px;height:24px;border-color:var(--gold);
+}
+.firewall-box::before{top:-2px;left:-2px;border-top:3px solid;border-left:3px solid}
+.firewall-box::after{bottom:-2px;right:-2px;border-bottom:3px solid;border-right:3px solid}
+.firewall-icon{
+  font-size:2.4rem;margin-bottom:20px;display:block;
+  filter:drop-shadow(0 0 12px rgba(201,168,76,.4));
+}
+.firewall-box h2{
+  font-family:var(--serif);font-size:clamp(1.6rem,3.5vw,2.4rem);
+  font-weight:700;line-height:1.3;margin-bottom:12px;
+}
+.firewall-intro{
+  color:var(--text);font-size:.95rem;max-width:520px;margin:0 auto 40px;
+  line-height:1.7;
+}
+.firewall-questions{list-style:none;text-align:left;max-width:540px;margin:0 auto}
+.firewall-questions li{
+  padding:20px 24px;margin-bottom:16px;
+  border:1px solid var(--border);background:var(--card);
+  display:flex;align-items:center;gap:16px;
+  font-family:var(--serif);font-size:clamp(1rem,2vw,1.2rem);
+  color:var(--white);line-height:1.4;
+  transition:border-color .3s,transform .3s;
+}
+.firewall-questions li:hover{border-color:var(--gold);transform:translateX(4px)}
+.firewall-questions li:last-child{margin-bottom:0}
+.fw-num{
+  font-family:var(--sans);font-size:.65rem;font-weight:700;
+  color:var(--gold);letter-spacing:2px;flex-shrink:0;
+  width:28px;height:28px;border:1px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;
+}
+.firewall-note{
+  color:var(--grey);font-size:.85rem;font-style:italic;
+  margin-top:36px;max-width:480px;margin-left:auto;margin-right:auto;
+  line-height:1.7;
+}
+
+/* CONTRACT */
+.contract{text-align:center;padding:120px 0}
+.contract-box{
+  border:1px solid var(--gold);padding:60px 40px;max-width:700px;margin:0 auto;
+  position:relative;background:rgba(201,168,76,.03);
+}
+.contract-box::before,.contract-box::after{
+  content:'';position:absolute;width:20px;height:20px;border-color:var(--gold);
+}
+.contract-box::before{top:-1px;left:-1px;border-top:2px solid;border-left:2px solid}
+.contract-box::after{bottom:-1px;right:-1px;border-bottom:2px solid;border-right:2px solid}
+.contract-stamp{
+  font-family:var(--serif);font-size:.8rem;letter-spacing:4px;
+  color:var(--gold);text-transform:uppercase;margin-bottom:24px;
+}
+.contract h2{
+  font-family:var(--serif);font-size:clamp(1.6rem,3.5vw,2.4rem);
+  font-weight:700;line-height:1.3;margin-bottom:20px;
+}
+.contract-terms{color:var(--grey);font-size:.85rem;margin:32px 0 40px;line-height:1.8}
+.contract-price{
+  font-family:var(--serif);font-size:2rem;color:var(--gold-light);
+  margin-bottom:8px;font-weight:700;
+}
+.contract-price-note{color:var(--grey);font-size:.8rem;margin-bottom:32px;letter-spacing:1px}
+
+/* FOOTER */
+footer{
+  text-align:center;padding:40px 24px;border-top:1px solid var(--border);
+  color:var(--grey);font-size:.75rem;letter-spacing:1px;
+}
+footer a{color:var(--gold);text-decoration:none}
+
+/* ====== RESPONSIVE — MOBILE FIRST BLINDAJE ====== */
+
+/* TABLET — 768px */
+@media(max-width:768px){
+  section{padding:80px 0}
+  .hero{min-height:100svh;padding:60px 20px}
+  .system-grid{grid-template-columns:1fr}
+  .tools-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .contract{padding:80px 0}
+  .firewall{padding:80px 0}
+  .contract-box{padding:48px 28px}
+  .firewall-box{padding:48px 28px}
+}
+
+/* MOBILE — 480px */
+@media(max-width:480px){
+  section{padding:60px 0}
+  .hero{padding:48px 16px;min-height:100svh}
+  .hero h1{font-size:clamp(1.65rem,7vw,2.4rem);margin-bottom:20px}
+  .hero-time{letter-spacing:2px;margin-bottom:24px;font-size:clamp(.8rem,2.5vw,1rem)}
+  .hero-sub{margin-bottom:32px;font-size:clamp(.9rem,2.8vw,1rem)}
+  .hero-scroll{bottom:24px}
+  .hero-scroll::after{height:28px}
+
+  .section-title{font-size:clamp(1.5rem,6vw,2rem);margin-bottom:18px}
+  .section-label{font-size:.65rem;letter-spacing:3px}
+  .section-text{font-size:.9rem;line-height:1.75}
+
+  .problem-quote{font-size:clamp(1rem,3.5vw,1.3rem);padding-left:16px;margin:28px 0}
+  .problem-list li{font-size:.88rem;padding:14px 0;gap:10px}
+
+  .system-card{padding:28px 20px}
+  .system-num{font-size:2.4rem;top:10px;right:14px}
+  .system-card h3{font-size:1.2rem}
+  .system-card p{font-size:.85rem}
+
+  .tools-grid{grid-template-columns:1fr;gap:10px;margin:32px 0}
+  .tool-item{padding:16px}
+  .tool-item h4{font-size:.95rem}
+
+  .firewall{padding:60px 0}
+  .firewall-box{padding:36px 20px;border-width:1px}
+  .firewall-box::before{border-width:2px}
+  .firewall-box::after{border-width:2px}
+  .firewall-icon{font-size:2rem;margin-bottom:14px}
+  .firewall-intro{font-size:.88rem;margin-bottom:28px}
+  .firewall-questions li{padding:16px 16px;gap:12px;font-size:clamp(.95rem,3vw,1.1rem)}
+  .fw-num{width:24px;height:24px;font-size:.6rem}
+  .firewall-note{font-size:.8rem;margin-top:28px}
+
+  .contract{padding:60px 0}
+  .contract-box{padding:32px 20px}
+  .contract h2{font-size:clamp(1.3rem,5.5vw,1.8rem)}
+  .contract-stamp{font-size:.7rem;letter-spacing:3px}
+  .contract-terms{font-size:.78rem;margin:24px 0 28px}
+  .contract-price{font-size:1.6rem}
+  .contract-price-note{font-size:.72rem;margin-bottom:24px}
+
+  /* FULL-WIDTH CTA ON MOBILE */
+  .cta-btn{width:100%;max-width:360px;padding:16px 24px;font-size:.85rem;letter-spacing:2px}
+  .cta-sm{width:100%;max-width:320px;padding:14px 20px}
+
+  .divider{margin:28px auto}
+  footer{padding:32px 16px}
+}
+
+/* SMALL MOBILE — 360px */
+@media(max-width:360px){
+  .hero h1{font-size:1.5rem}
+  .hero-sub{font-size:.85rem}
+  .hero-price{font-size:1rem}
+  .hero-price span{font-size:1.4rem}
+  .section-title{font-size:1.35rem}
+  .firewall-questions li{padding:14px 12px;font-size:.9rem}
+  .contract h2{font-size:1.2rem}
+  .contract-box{padding:28px 16px}
+  .cta-btn{max-width:100%;font-size:.8rem;letter-spacing:1.5px}
+}
+
+/* REDUCE MOTION FOR ACCESSIBILITY & PERFORMANCE */
+@media(prefers-reduced-motion:reduce){
+  .fade-in{opacity:1;transform:none;transition:none}
+  .hero-time,.hero h1,.hero-sub,.hero-price,.hero .cta-btn,.hero-scroll{animation:none;opacity:1}
+  .cta-btn::after{display:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ====== HERO SECTION ====== -->
+<section class="hero" id="hero">
+  <div class="container">
+    <p class="hero-time">Ingeniería Mental</p>
+    <h1>Son las 3:17 de la madrugada.<br>Lo sé porque es la misma hora a la que tú estás leyendo esto.</h1>
+    <p class="hero-sub">Manual de Ingeniería Mental para reconstruir tu vida cuando el mundo duerme.</p>
+    <div class="hero-price">Acceso inmediato — <span>$29.99 USD</span></div>
+    <a href="https://whop.com/checkout/plan_xTjzRLpY4NM97" class="cta-btn" id="cta-hero" onclick="trackCTA('hero')">Comenzar Mi Reconstrucción</a>
+  </div>
+  <div class="hero-scroll">Descender</div>
+</section>
+
+<!-- ====== PROBLEMA ====== -->
+<section class="problem" id="problema">
+  <div class="container">
+    <div class="fade-in">
+      <p class="section-label">El Diagnóstico</p>
+      <h2 class="section-title">El ruido que confundes<br>con <span class="gold">compañía</span>.</h2>
+      <p class="section-text">Llevas años ejecutando un software que no escribiste. Programas heredados de relaciones que ya no existen, expectativas que nunca fueron tuyas, y un miedo irracional a un silencio que es, en realidad, tu único aliado.</p>
+    </div>
+
+    <blockquote class="problem-quote fade-in">
+      "No vine a consolarte. Vine a reconstruirte. Si quieres palmaditas en la espalda, cierra este manual. Si quieres herramientas, sigue leyendo."
+    </blockquote>
+
+    <ul class="problem-list fade-in">
+      <li>Revisas tu teléfono 47 veces al día buscando una validación que nunca llega.</li>
+      <li>Confundes estar acompañado con no estar solo. Son cosas radicalmente distintas.</li>
+      <li>Sufres por lo que no controlas: lo que otros piensan, sienten o deciden sobre ti.</li>
+      <li>Tu "plan de vida" fue diseñado por alguien que ya no eres — y nunca lo actualizaste.</li>
+      <li>El silencio te aterra porque en él escuchas todo lo que evitas durante el día.</li>
+    </ul>
+
+    <div class="divider"></div>
+    <p class="section-text fade-in" style="color:var(--grey);font-style:italic;text-align:center;max-width:100%">Si te reconoces en al menos dos de estas líneas, este manual fue escrito para ti.</p>
+  </div>
+</section>
+
+<!-- ====== EL SISTEMA ====== -->
+<section class="system" id="sistema">
+  <div class="container">
+    <div class="fade-in">
+      <p class="section-label">La Arquitectura</p>
+      <h2 class="section-title">4 Sistemas para reescribir<br>tu <span class="gold">código operativo</span>.</h2>
+      <p class="section-text">Esto no es autoayuda. Es un protocolo de ingeniería mental diseñado para desmontar lo que no sirve y construir una estructura que soporte presión sin quebrarse.</p>
+    </div>
+
+    <div class="system-grid">
+      <div class="system-card fade-in">
+        <span class="system-num">01</span>
+        <h3>Sistema FILTRO</h3>
+        <p>Aprende a separar lo que controlas de lo que no. El 83% de tu sufrimiento viene de invertir energía emocional en variables que jamás estuvieron bajo tu mando. Aquí las identificas y las eliminas.</p>
+      </div>
+      <div class="system-card fade-in">
+        <span class="system-num">02</span>
+        <h3>Sistema CORTE</h3>
+        <p>Auditoría radical de tu círculo. No todos merecen tu energía. Aprenderás a ejecutar cortes quirúrgicos: sin drama, sin explicaciones, sin culpa. Solo precisión operativa.</p>
+      </div>
+      <div class="system-card fade-in">
+        <span class="system-num">03</span>
+        <h3>Sistema FORJA</h3>
+        <p>Construye rituales de poder desde la soledad. Rutinas matutinas, caminatas estratégicas, el diario de campo. Conviertes el vacío en tu laboratorio personal de transformación.</p>
+      </div>
+      <div class="system-card fade-in">
+        <span class="system-num">04</span>
+        <h3>Sistema BLINDAJE</h3>
+        <p>Protección contra recaídas emocionales. Protocolos de emergencia, el Firewall Mental y técnicas de neutralización para cuando el pasado intente hackear tu presente.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:48px" class="fade-in">
+      <a href="https://whop.com/checkout/plan_xTjzRLpY4NM97" class="cta-btn cta-sm" id="cta-sistema" onclick="trackCTA('sistema')">Acceder al Sistema Completo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== 18 HERRAMIENTAS ====== -->
+<section class="tools" id="herramientas">
+  <div class="container">
+    <div class="fade-in">
+      <p class="section-label">Arsenal Completo</p>
+      <h2 class="section-title">18 Herramientas de<br><span class="gold">Ingeniería Mental</span>.</h2>
+      <p class="section-text">Cada herramienta es un protocolo ejecutable. No teoría. No filosofía abstracta. Instrucciones paso a paso para desmontar patrones y construir nuevos sistemas operativos mentales.</p>
+    </div>
+
+    <div class="tools-grid">
+      <div class="tool-item fade-in"><p class="tool-num">HERRAMIENTA 01</p><h4>Dicotomía del Control</h4></div>
+      <div class="tool-item fade-in"><p class="tool-num">HERRAMIENTA 02</p><h4>Firewall Mental</h4></div>
+      <div class="tool-item fade-in"><p class="tool-num">HERRAMIENTA 03</p><h4>Autopsia de Derrotas</h4></div>
+      <div class="tool-item fade-in"><p class="tool-num">HERRAMIENTA 04</p><h4>Auditoría de Círculo</h4></div>
+      <div class="tool-item fade-in"><p class="tool-num">HERRAMIENTA 05</p><h4>Protocolo de Corte Limpio</h4></div>
+      <div class="tool-item fade-in"><p class="tool-num">HERRAMIENTA 06</p><h4>Ritual de Soledad Matutina</h4></div>
+      <div class="tool-item fade-in"><p class="tool-num">HERRAMIENTA 07</p><h4>Caminata Estratégica</h4></div>
+      <div class="tool-item fade-in"><p class="tool-num">HERRAMIENTA 08</p><h4>Diario de Campo</h4></div>
+      <div class="tool-item fade-in"><p class="tool-num">HERRAMIENTA 09</p><h4>Mapa de Variables</h4></div>
+      <div class="tool-item fade-in"><p class="tool-num">HERRAMIENTA 10</p><h4>Desintoxicación Digital</h4></div>
+      <div class="tool-item fade-in"><p class="tool-num">HERRAMIENTA 11</p><h4>Inventario de Energía</h4></div>
+      <div class="tool-item fade-in"><p class="tool-num">HERRAMIENTA 12</p><h4>Protocolo de Emergencia</h4></div>
+      <div class="tool-item fade-in"><p class="tool-num">HERRAMIENTA 13</p><h4>Neutralización Emocional</h4></div>
+      <div class="tool-item fade-in"><p class="tool-num">HERRAMIENTA 14</p><h4>Reconfiguración de Identidad</h4></div>
+      <div class="tool-item fade-in"><p class="tool-num">HERRAMIENTA 15</p><h4>Arquitectura de Hábitos</h4></div>
+      <div class="tool-item fade-in"><p class="tool-num">HERRAMIENTA 16</p><h4>Blindaje Anti-Recaída</h4></div>
+      <div class="tool-item fade-in"><p class="tool-num">HERRAMIENTA 17</p><h4>Carta al Yo Futuro</h4></div>
+      <div class="tool-item fade-in"><p class="tool-num">HERRAMIENTA 18</p><h4>Contrato de Soberanía</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FIREWALL MENTAL ====== -->
+<section class="firewall" id="firewall">
+  <div class="container">
+    <div class="firewall-box fade-in">
+      <span class="firewall-icon">🛡️</span>
+      <p class="section-label">Protocolo de Defensa</p>
+      <h2>El <span class="gold">Firewall Mental</span>:<br>3 preguntas antes de sufrir.</h2>
+      <p class="firewall-intro">Antes de permitir que cualquier pensamiento, persona o situación consuma tu energía, pásalo por este filtro. Si no sobrevive las tres preguntas, no merece tu atención.</p>
+
+      <ol class="firewall-questions">
+        <li><span class="fw-num">01</span>¿Esto depende de mí?</li>
+        <li><span class="fw-num">02</span>¿Cambia algo si me preocupo?</li>
+        <li><span class="fw-num">03</span>¿Qué haría mi versión más fuerte?</li>
+      </ol>
+
+      <p class="firewall-note">"Si la respuesta a las dos primeras es NO, y la tercera te incomoda — felicidades: acabas de encontrar exactamente lo que necesitas hacer."</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CONTRATO FINAL ====== -->
+<section class="contract" id="contrato">
+  <div class="container">
+    <div class="contract-box fade-in">
+      <p class="contract-stamp">Documento Vinculante</p>
+      <h2>Esto no es una compra.<br>Es la firma de tu <span class="gold">Contrato de Soberanía</span>.</h2>
+      <p class="section-text" style="text-align:center;margin:0 auto 20px;max-width:520px">90 días para demostrar que la persona más poderosa en tu vida eres tú. Sin excusas. Sin negociaciones. Sin vuelta atrás.</p>
+      <p class="contract-terms">
+        4 Sistemas de Ingeniería Mental &bull; 18 Herramientas Ejecutables &bull; Protocolos de Emergencia<br>
+        Acceso Inmediato &bull; Formato Digital &bull; De por vida
+      </p>
+      <p class="contract-price">$29.99 USD</p>
+      <p class="contract-price-note">Pago único — Sin suscripciones — Acceso permanente</p>
+      <a href="https://whop.com/checkout/plan_xTjzRLpY4NM97" class="cta-btn" id="cta-contrato" onclick="trackCTA('contrato')">Firmar Mi Contrato</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <p>&copy; 2026 Hollyfield Inversiones &bull; Todos los derechos reservados</p>
+  <p style="margin-top:8px"><a href="#">Términos</a> &bull; <a href="#">Privacidad</a></p>
+</footer>
+
+<script>
+// === INTERSECTION OBSERVER FOR FADE-IN ===
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
+}, { threshold: 0.15 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// === CTA TRACKING — META PIXEL (LIVE) ===
+function trackCTA(location) {
+  // Meta Pixel — InitiateCheckout
+  if (typeof fbq !== 'undefined') {
+    fbq('track', 'InitiateCheckout', {
+      content_name: 'El Arte de Estar Solo',
+      content_category: 'Manual de Ingenieria Mental',
+      value: 29.99,
+      currency: 'USD'
+    });
+  }
+  // TikTok SDK (activar cuando se tenga el Pixel ID)
+  // if (typeof ttq !== 'undefined') { ttq.track('ClickButton', { content_name: 'CTA_' + location }); }
+  console.log('[Hollyfield] CTA fired:', location);
+}
+</script>
+</body>
+</html>
